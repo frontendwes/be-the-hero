@@ -1,6 +1,6 @@
 import React, {useEffect, useState } from 'react'
 import logoImg from '../../assets/logo.svg'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { FiPower, FiTrash2 } from 'react-icons/fi'
 import './style.css'
 import api from '../../services/api'
@@ -9,6 +9,7 @@ export default function Profile() {
     const [incidents, setIncidents] = useState([])
     const ongName = localStorage.getItem('ongName')
     const ongId = localStorage.getItem('ong-id')
+    const history = useHistory()
 
 
     useEffect(() => {
@@ -34,13 +35,18 @@ export default function Profile() {
         }
     }
 
+    function handleLogout(){
+        localStorage.clear();
+        history.push('/')
+    }
+
     return (
         <div className="profile-container">
             <header>
                 <img src={logoImg} alt="Be the hero"/>
                 <span>Ben Vinda, {ongName}</span>
                 <Link className='button' to='/incidents/new'>Cadastrar novo caso</Link>
-                <button type='button'>
+                <button type='button' onClick={handleLogout}>
                     <FiPower size={18} color='#E02041'/>
                 </button>
             </header>
