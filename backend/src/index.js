@@ -1,12 +1,14 @@
 const express = require('express')
 const routes = require('./routes')
 const cors = require('cors')
+const { errors } = require('celebrate')
 
 const app = express()
 
 app.use(cors())
 app.use(express.json()) // Informa que o express deve converter o corpo da requisição para JSON
 app.use(routes)
+app.use(errors());
 
 app.listen(3333)
 
