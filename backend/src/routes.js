@@ -11,6 +11,7 @@ const routes = express.Router();
 routes.post('/sessions', SessionController.create)
 
 routes.get('/ongs', OngController.index)
+
 routes.post('/ongs', celebrate({
     [Segments.BODY]: Joi.object().keys({
         name: Joi.string().required(),
@@ -26,7 +27,9 @@ routes.get('/incidents', celebrate({
         page: Joi.number(),
     })
 }), IncidentController.index)
+
 routes.post('/incidents', IncidentController.create)
+
 routes.delete('/incidents/:id', celebrate({
     [Segments.PARAMS]: Joi.object().keys({
        id: Joi.number().required(), 

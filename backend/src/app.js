@@ -10,7 +10,7 @@ app.use(express.json()) // Informa que o express deve converter o corpo da requi
 app.use(routes)
 app.use(errors());
 
-app.listen(3333)
+module.exports = app
 
 
 //  Tipos de parâmetros
