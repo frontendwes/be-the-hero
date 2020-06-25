@@ -76,7 +76,7 @@ $ git clone https://github.com/WesleyMarquesGit/BeTheHero.git
 
 ```bash
 
-As dependências devem ser instaladas em todas pastas (backend, frontend e mobile)
+Instale as dependências em todas pastas (backend, frontend e mobile)
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd BeTheHero/pasta
