@@ -72,47 +72,33 @@ Tanto o Front-End quanto o Mobile precisam que o Back-End esteja sendo executado
 $ git clone https://github.com/WesleyMarquesGit/BeTheHero.git
 ```
 
-#### 2. Rode o servidor (Back-End)
+#### 2. Instalação
 
 ```bash
+
+As dependências devem ser instaladas em todas pastas (backend, frontend e mobile)
+
 # Acesse a pasta do projeto no terminal/cmd
-$ cd BeTheHero/backend
+$ cd BeTheHero/pasta
 
 # Instale as dependências
-$ npm install
+$ yarn
 
-# Execute a aplicação em modo de desenvolvimento
-$ npm run dev
-
-# O servidor inciará na porta:3333 - acesse http://localhost:3333
 ```
 
-#### 3. Rodando a aplicação web (Front-End)
+#### 3. Startando
 
 ```bash
-# Acesse a pasta do projeto no seu terminal/cmd
-$ cd Ecoleta/web
 
-# Instale as dependências
-$ npm install
+Use este comando em todas pastas, começando pela backend.
+
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd BeTheHero/pasta
 
 # Execute a aplicação em modo de desenvolvimento
-$ npm start
+$ yarn start
 
 # A aplicação será aberta na porta:3000 - acesse http://localhost:3000
-```
-
-#### 4. Rodando a aplicação mobile
-
-```bash
-# Acesse a pasta do projeto no seu terminal/cmd
-$ cd Ecoleta/mobile
-
-# Instale as dependências
-$ npm install
-
-# Execute a aplicação em modo de desenvolvimento
-$ npm start
 ```
 
 ---
